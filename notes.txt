@@ -1,0 +1,100 @@
+SOME RULE OF IMPORT EXPORT IN REACT
+
+if we export any component as default like (export default app) then we can import this component with any name
+
+example->export default app
+
+         import anyname from './app'
+
+
+         but if we have multiple function in a single component like app1,app2,app3
+         then we can export like this...export{app1,app2,app3} and when we want import these file. we have to use the same name like export.we can not change the name of exports functions.
+
+         example-> import {app1,app2,app3} from './app'
+
+         or we can do also import{app1 as anyname,app2,app3} from'./app'
+         if we use as with anyname then app1 name will chnaged as anyname
+
+
+         SOME RULE OF PROPS
+
+         we can send string as props without any curly bracket like this
+         
+         New way-> <app1 name="mayank"/>
+
+         Old way-> <app1 name={"mayank"}/>
+
+
+         we can receive props like this also (destructring) ..
+
+         example->
+          <app1 name="mayank" text="eng"/>
+
+
+function Myheading(props) {
+    const{name,text}=props
+    return (
+        <div>
+            <h2>{name}</h2>
+            <h2>{text}</h2>
+            </div>
+    )
+}
+
+
+               OR
+
+
+   function Myheading({name,text}) {
+      return (
+              <div>
+            <h2>{name}</h2>
+            <h2>{text}</h2>
+            </div>
+    )
+}
+
+
+if we dont have any props value. then we can do like this
+
+ <app1 name="mayank" />
+
+function Myheading({name,text="eng"}) {
+    
+    return (
+        <div>
+            Myheading
+
+            <h2>{name}</h2>
+            <h2>{text}</h2>
+            </div>
+    )
+}
+
+
+
+
+Diffrence between npm and npx 
+
+npm install react globaly so when we need to install react we dont need to write every time (npm) all we have to type only create-react-app and ap name
+
+example- npm -g create-react-app [appname](installing react globaly)
+
+and next time we have to just type create-react-app  mayapp
+
+
+npx will install react for single time when we need new react app we have to write npx create-react-app [myapp] 
+
+
+
+Time=> 4.39
+
+
+
+
+
+
+
+
+
+
